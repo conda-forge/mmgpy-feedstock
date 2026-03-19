@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.7.0"
+  version: "0.8.0"
 
 package:
   name: mmgpy
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/kmarchais/mmgpy/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: aa8d5249add0dde9229899e735a04d4c650c2df6e8676e367602b99bd0037a4c
+  sha256: e7727e32e63d32dfa526616f847bf283b5b8781c70efb503dd557ff853f90fb5
 
 build:
   number: 0
@@ -47,8 +47,10 @@ requirements:
     - meshio >=5.3.5
     - pyvista >=0.47.0
     - rich >=13.0.0
-    - scipy >=1.11.0,<1.17
+    - scipy >=1.11.0,<2
     - mmgsuite * vtk*
+    # conda-forge ships VTK 9.6 for all Python versions, so no marker split
+    # needed here (unlike pyproject.toml which allows 9.5.x for Python <3.14).
     - vtk >=9.6,<9.7
     - if: python < '3.11'
       then: typing-extensions >=4.0.0
