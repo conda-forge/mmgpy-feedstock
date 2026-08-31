@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.16.2"
+  version: "0.17.0"
 
 package:
   name: mmgpy
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/kmarchais/mmgpy/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 969e38ea62242f1e66a8048f34f3c1ef0724d378bd00f0d9c142443e177d2556
+  sha256: d714b3c44c3343492ae30b436080a4dab48dcc86bd733916ac443f14e02ebe11
 
 build:
   number: 0
