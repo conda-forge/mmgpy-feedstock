@@ -13,6 +13,8 @@ source:
 
 build:
   number: 0
+  # Keep the minimum here so unversioned Python requirements follow the CI variant.
+  skip: match(python, "<3.11")
   script:
     - if: unix
       then: |
@@ -36,12 +38,12 @@ requirements:
     - cmake >=3.15
     - ninja
   host:
-    - python >=3.11
+    - python
     - pybind11 >=3.0.4
-    - numpy >=2.1.0
+    - numpy >=2.1.0,<3
     - mmgsuite
   run:
-    - python >=3.11
+    - python
     - numpy >=2.1.0,<3
     - pyvista >=0.48,<1
     - rich >=13.0.0,<16
