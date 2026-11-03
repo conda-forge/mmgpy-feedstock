@@ -40,7 +40,7 @@ requirements:
   host:
     - python
     - pybind11 >=3.0.4
-    - numpy >=2.1.0,<3
+    - numpy
     - mmgsuite
   run:
     - python
