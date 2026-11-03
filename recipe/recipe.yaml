@@ -36,19 +36,17 @@ requirements:
     - cmake >=3.15
     - ninja
   host:
-    - python
-    - pybind11 >=3.0.0
-    - numpy
+    - python >=3.11
+    - pybind11 >=3.0.4
+    - numpy >=2.1.0
     - mmgsuite
   run:
-    - python
-    - numpy >=2.0.2,<3
+    - python >=3.11
+    - numpy >=2.1.0,<3
     - pyvista >=0.48,<1
-    - rich >=13.0.0,<15
-    - scipy >=1.11.0,<2
+    - rich >=13.0.0,<16
+    - scipy >=1.13.0,<2
     - mmgsuite
-    - if: python < '3.11'
-      then: typing-extensions >=4.0.0,<5
 
 tests:
   - python:
