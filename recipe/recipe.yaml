@@ -12,7 +12,7 @@ source:
   sha256: 156e16fb9b895387270b7405224a4d3d9192eb9fdedae5d05762b560abefb2c4
 
 build:
-  number: 0
+  number: 1
   # Keep the minimum here so unversioned Python requirements follow the CI variant.
   skip: match(python, "<3.11")
   script:
